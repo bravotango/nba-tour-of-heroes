@@ -1,0 +1,65 @@
+<div class="playerCard p-3" [style.border-color]="teamColor(player)">
+
+    <div class="teamLogoBackground" [ngStyle]="{background: 'url(' + image + ') center center/100% no-repeat'}"></div>
+
+    <div class="header mb-1" [style.background-color]="teamColor(player)">
+        <div>{{player.position}}</div>
+        <div>{{player.first_name | slice:0:1 }}. {{player.last_name }} </div>
+    </div>
+
+    <div class="player">
+        <div class="mug pr-2"><img [src]="'https://www.btgraphix.com/nba/images/all/' + player.id + '.jpg'"
+                class="img-fluid" /></div>
+        <div class="team-pic pr-3">
+            <img [src]="'https://www.btgraphix.com/nba/images/teams/' + player.team_abbreviation + '.gif'"
+                class="img-fluid" />
+        </div>
+        <div class="draft">
+            <div class="group">
+                <div class="value">{{player.round }} round {{player.pick}} pick</div>
+            </div>
+            <div class="group">
+                <div class="label pr-2">Draft Year:</div>
+                <div class="value">{{player.draft_year }}</div>
+            </div>
+            <div class="group">
+                <div class="label pr-2">Drafted By:</div>
+                <div class="value">{{player.drafted_by}}</div>
+            </div>
+        </div>
+        <div class="bio">
+            <div class="group">
+                <div class="label pr-2">Born:</div>
+                <div class="value" [title]="player.birthplace">
+                    {{ (player.birthplace.length>27) ? ( player.birthplace | slice: 0:27 ) + '...' : player.birthplace }}
+                </div>
+            </div>
+            <div class="group">
+                <div class="label pr-2">Birthdate:</div>
+                <div class="value">{{player.dob | date:"MM/dd/yy"}}</div>
+            </div>
+            <div class="group">
+                <div class="label pr-2">Height:</div>
+                <div class="value">{{player.feet }}'{{player.inches}}"</div>
+            </div>
+            <div class="group">
+                <div class="label pr-2">Weight:</div>
+                <div class="value">{{player.weight}}lbs.</div>
+            </div>
+
+        </div>
+        <div class="age pt-2">Age: <strong>{{age}}</strong></div>
+    </div>
+
+
+    <div class="stats mt-1">
+        <div class="stat" [style.background-color]="teamColor(player)">
+            <div><span>{{ 'PTS' | lowercase}}</span> {{player.points_per_game | number:'.1-1' }}</div>
+            <div><span>{{ 'REB' | lowercase}}</span> {{player.total_rebounds_per_game | number:'.1-1'}}</div>
+            <div><span>{{ 'AST' | lowercase}}</span> {{player.assists_per_game | number: '.1-1'}}</div>
+            <div><span>{{ 'BLK' | lowercase}}</span> {{player.blocks_per_game | number: '.1-1'}}</div>
+            <div><span>{{ 'ST' | lowercase}}</span> {{player.steals_per_game | number: '.1-1'}}</div>
+            <div><span>{{ 'TO' | lowercase}}</span> {{player.turnovers_per_game | number: '.1-1'}}</div>
+        </div>
+    </div>
+</div>

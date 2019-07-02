@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Dashboard</h2>
+</div>
+<div class="container-fluid">
+  <div class="grid">
+
+    <div *ngFor="let player of players" [routerLink]="['/detail', player.id]">
+      <app-player-card [player]="player"></app-player-card>
+    </div>
+
+  </div>
+
+</div>

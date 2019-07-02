@@ -1,0 +1,82 @@
+.playerCard {border:1px solid green;position:relative; }
+
+.header{
+    display:flex;
+    color:#fff;
+    div:nth-child(1) {border-right:1px solid #fff;padding:.25em .5em;font-weight:bold;}
+    div:nth-child(2) {padding:.25em .5em;font-weight:bold;}
+    div {
+        padding:.25em;
+        font-weight:bold;
+    }
+}
+
+.player {
+    font-size:.80em;
+    display:grid;
+    justify-content: space-between;
+    grid-template-areas:    "a b d d"
+                            "a c c x"
+                            "a c c e";
+    .mug {grid-area:a;}
+    .team-pic {grid-area:b;img{width:75%}}
+    .bio {
+        grid-area:c;
+        padding:0 0 1em .25em;
+        div {display:inline-block;}
+        div.group{display:block;
+            .value {font-weight:bold;}
+        }
+    }
+    .draft {
+        grid-area:d;
+        border:1px solid #ccc;
+        border-radius:.15em;
+        padding:1em;
+
+        background-color:transparent;
+        div {display:inline-block;}
+        div.group{display:block;
+            .value {font-weight:bold;}
+        }
+    }
+    .age {
+        grid-area:e;
+        strong {font-size:3em;}
+    }
+}
+
+.stats {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    div {
+        color:#fff;
+        width:100%;
+        padding:.25em;
+        flex:1 1 auto;
+        text-align: center
+    }
+    .stat {
+        display:flex;
+        align-content: center;
+        font-weight:bold;
+        div span {
+            font-size:.85em;
+            text-transform:uppercase;
+            font-weight:normal;
+            display:block;
+        }
+    }
+}
+
+.teamLogoBackground {
+    content: "";
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+}
