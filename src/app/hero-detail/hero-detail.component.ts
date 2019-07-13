@@ -1,36 +1,38 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Player } from '../nba-player';
+import { StatLine } from '../stats';
+import { Bio } from '../bio';
+import { Team } from '../team';
 
 import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 import {Location} from '@angular/common';
-import {NbaPlayerService} from './../nba-player.service';
+import {NbaService} from './../nba.service';
+
 
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.scss']
 })
+
 export class HeroDetailComponent implements OnInit {
 
-  player:Player;
+  player:StatLine;
 
   constructor(
     private route:ActivatedRoute,
-    private nbaPlayerService:NbaPlayerService, 
+    private nbaService:NbaService, 
     private location: Location,
 
     ) { }
 
   ngOnInit() {
-    this.getHero();
+    this.getPlayer();
   }
 
-  getHero(): void {
+  getPlayer(){
     const id = +this.route.snapshot.paramMap.get('id');
-    
-    this.nbaPlayerService.getNbaPlayer(id)
-    .subscribe(player => this.player = player)
-    ;
+    this.nbaService.getPlayer(id)
+    .subscribe(player => this.player = player);
   }
 
   goBack():void{

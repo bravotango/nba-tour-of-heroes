@@ -10,9 +10,11 @@ export class NbaPlayerService {
 
   constructor() { }
 
+
   getNbaPlayers(): Observable<Player[]> {
     return of (PLAYERS);
   }
+
 
   getNbaPlayer(id:number): Observable<Player> {
     return of (PLAYERS.find(player => player.id === id));

@@ -1,11 +1,32 @@
 .selected {background-color: rgba(0,0,0,.2)}
+.small {font-size:70%;}
 
 
-.table th, .table td {
-    padding: 0.75rem;
-    vertical-align: inherit;
-  }
-
-  
+td {font-size:70%;vertical-align: middle;padding:1px;}
 
 img {width:25px;}
+
+.first_name  {
+    font-weight: bold;
+    display:block;
+    visibility:hidden;
+    width:1em;
+    overflow: hidden; 
+
+    p::first-letter {
+        visibility:visible;
+        display: inline-flex;
+      }
+  }
+
+  .grid {
+    display:grid;
+    justify-content: space-between;
+    grid-template-areas:    "a b b c d d d d d d e f f f f f";
+    .rank {grid-area:a;}
+    .mug {grid-area:b;}
+    .initial {grid-area:c;}
+    .last {grid-area:d;}
+    .logo {grid-area:e;}
+    .team {grid-area:f;}
+  }

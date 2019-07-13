@@ -2,27 +2,36 @@
   <h2>Heroes</h2>
 </div>
 
+
+
 <div class="container">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Rank</th>
-        <th scope="col">Player</th>
-        <th scope="col">Team</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let player of players; index as i" [routerLink]="['/detail', player.id]">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>
-          <img [src]="'https://www.btgraphix.com/nba/images/all/' + player.id + '.jpg'" class="mr-2">
-          {{ player.first_name | uppercase }} {{ player.last_name | uppercase }}
-        </td>
-        <td>
-          <img [src]="'https://www.btgraphix.com/nba/images/teams/' + player.team_abbreviation + '.gif'" class="mr-2">
-          {{ player.team_name | uppercase }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+            <th width="5%" scope="col">Rank</th>
+            <th scope="col" colspan="2">Player</th>
+          <th scope="col" colspan="2">Team</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+        <tr *ngIf="!stats">
+          <th colspan="4" scope="row"> <div class="loader"></div></th>
+        </tr>
+
+        <tr *ngFor="let statLine of stats; index as j" [routerLink]="['/detail', statLine.id]">
+          <th scope="row">{{ j + 1 }}</th>
+          <td class=""><img [src]="'https://www.btgraphix.com/nba/images/all/' + statLine.id + '.jpg'" class="mr-2"></td>
+          <td>{{ statLine.fname | lowercase }}
+            {{ statLine.lname | uppercase }}</td>
+          <td>
+              <img [src]="'https://www.btgraphix.com/nba/images/teams/' + statLine.Team + '.gif'" class="mr-2">
+          </td>
+          <td>
+            {{ statLine.Team | uppercase }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

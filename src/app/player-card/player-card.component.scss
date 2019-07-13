@@ -1,4 +1,4 @@
-.playerCard {border:1px solid green;position:relative; }
+.playerCard {border:1px solid #ccc;position:relative; }
 
 .header{
     display:flex;
@@ -15,14 +15,22 @@
     font-size:.80em;
     display:grid;
     justify-content: space-between;
-    grid-template-areas:    "a b d d"
-                            "a c c x"
-                            "a c c e";
-    .mug {grid-area:a;}
-    .team-pic {grid-area:b;img{width:75%}}
+    grid-template-areas:    "a a b b d d"
+                            "a a c c c c"
+                            "a a f f f e";
+    .mug {grid-area:a;img{width:120px;height:180px;}}
+    .team-pic {grid-area:b;img{height:75px;}}
     .bio {
         grid-area:c;
-        padding:0 0 1em .25em;
+        padding:0;
+        div {display:inline-block;}
+        div.group{display:block;
+            .value {font-weight:bold;}
+        }
+    }
+    .size {
+        grid-area:f;
+        padding:0;
         div {display:inline-block;}
         div.group{display:block;
             .value {font-weight:bold;}
@@ -32,7 +40,7 @@
         grid-area:d;
         border:1px solid #ccc;
         border-radius:.15em;
-        padding:1em;
+        padding:.5em .5em 0 .5em;
 
         background-color:transparent;
         div {display:inline-block;}
@@ -41,8 +49,8 @@
         }
     }
     .age {
-        grid-area:e;
-        strong {font-size:3em;}
+        grid-area:e; padding:0;
+        strong {font-size:2em;}
     }
 }
 

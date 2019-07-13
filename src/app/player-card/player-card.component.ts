@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Player } from '../nba-player';
+import { StatLine } from '../stats';
+import { NbaService } from '../nba.service';
+import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+import { Bio } from '../bio';
+import { Observable } from 'rxjs';
+import { Team } from '../team';
 
 @Component({
   selector: 'app-player-card',
@@ -8,31 +13,57 @@ import { Player } from '../nba-player';
 })
 export class PlayerCardComponent implements OnInit {
 
-  @Input() player:Player;
+  @Input() player:StatLine;
+  @Input() teamAbb:string;
+
+  bio:Bio;
+  team:Team;
+
   image:string;
   age:number;
+  color:string = "#ccc"
 
-  constructor() { }
+  constructor(private nbaService:NbaService,private route:ActivatedRoute) { }
 
   ngOnInit() {
+
     this.teamBackground(this.player);
-    this.calculateAge(this.player);
+    this.getTeam();
+    this.getBio()
+
   }
 
-  teamColor(player:Player){
-    return "#" + player.team_color;
+  getBio(){
+    //const id = +this.route.snapshot.paramMap.get('id');
+    this.nbaService.getBio(this.player.id)
+    .subscribe((bio) => {
+      this.bio = bio;
+      if (this.bio) {this.calculateAge(this.bio) } else {this.age=0}
+    });
   }
 
-  teamBackground(player:Player){
-    let abb = player.team_abbreviation;
-    if (abb === 'okl') { abb = 'okc'}
-    this.image = "https://www.nba.com/assets/logos/teams/primary/web/" + abb.toUpperCase() + ".svg"
+  teamBackground(player:StatLine){
+    let abb = player.Team;
+    this.image = "https://btgraphix.com/nba/images/teams/" + abb + ".svg"
   }
 
-  calculateAge(player:Player){
-    let timeDiff = Math.abs(Date.now() - new Date(player.dob).getTime());
+  calculateAge(bio:Bio):void{
+    let timeDiff = Math.abs(Date.now() - new Date(bio.dob).getTime());
     let age = Math.floor((timeDiff / (1000 * 3600 * 24))/365.25);
     this.age = age;
+  }
+
+
+  getTeam(){
+    this.nbaService.getTeam(this.teamAbb)
+    .subscribe((team) => {
+      this.team = team;
+      this.getColor(team);
+    });
+  }
+
+  getColor(team){
+    if(team) {this.color = "#" + team.color;}
   }
 
 }
