@@ -26,6 +26,8 @@
     getStats(): Observable<StatLine[]> {
       return this.httpClient.get<StatLine[]>('https://btgraphix.com/nba/stats.php');
     }
+
+
     getTeams() {
       return this.httpClient.get('https://btgraphix.com/nba/teams.php');
     }

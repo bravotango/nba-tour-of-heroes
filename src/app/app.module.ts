@@ -11,6 +11,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PlayerCardComponent } from './player-card/player-card.component';
+import { NgbdTableComplete } from './table-complete/table-complete.component';
+import { NgbdSortableHeader } from './sortable.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PlayerCardComponent } from './player-card/player-card.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    PlayerCardComponent
+    PlayerCardComponent,
+    NgbdTableComplete,
+    NgbdSortableHeader
   ],
   imports: [
     BrowserModule,
