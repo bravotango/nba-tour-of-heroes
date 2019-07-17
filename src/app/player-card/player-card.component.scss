@@ -5,24 +5,30 @@
     color:#fff;
     div:nth-child(1) {border-right:1px solid #fff;padding:.25em .5em;font-weight:bold;}
     div:nth-child(2) {padding:.25em .5em;font-weight:bold;}
+
     div {
         padding:.25em;
         font-weight:bold;
     }
 }
 
+
 .player {
     font-size:.80em;
     display:grid;
     justify-content: space-between;
     grid-template-areas:    "a a b b d d"
+                            "a a b b d d"
+                            "a a b b x x"
                             "a a c c c c"
                             "a a f f f e";
     .mug {grid-area:a;img{width:120px;height:180px;}}
-    .team-pic {grid-area:b;img{height:75px;}}
+    .team-pic {grid-area:b;img{height:55px;}}
+
+    .team-city {grid-area:t;}
+
     .bio {
         grid-area:c;
-        padding:0;
         div {display:inline-block;}
         div.group{display:block;
             .value {font-weight:bold;}
@@ -30,7 +36,6 @@
     }
     .size {
         grid-area:f;
-        padding:0;
         div {display:inline-block;}
         div.group{display:block;
             .value {font-weight:bold;}
@@ -39,8 +44,6 @@
     .draft {
         grid-area:d;
         border:1px solid #ccc;
-        border-radius:.15em;
-        padding:.5em .5em 0 .5em;
 
         background-color:transparent;
         div {display:inline-block;}
@@ -54,6 +57,22 @@
     }
 }
 
+@media screen and (max-width:480px) {
+    .player {    font-size:.70em;
+    display:grid;
+    justify-content: space-between;
+    grid-template-areas:    "a a b b d d d d"
+                            "a a b b d d d d"
+                            "c c c c c c c c"
+                            "f f f f f f e e";
+
+                            .mug {img{height:67px;width:50px;}}
+                            .team-pic {img{height:35px;}}
+}
+
+
+
+}
 .stats {
     display:flex;
     flex-direction:column;
@@ -66,11 +85,12 @@
         text-align: center
     }
     .stat {
-        display:flex;
+        display:flex;            
+
         align-content: center;
         font-weight:bold;
         div span {
-            font-size:.85em;
+
             text-transform:uppercase;
             font-weight:normal;
             display:block;

@@ -8,23 +8,25 @@
     </div>
 
     <div class="player">
-        <div class="mug pr-2"><img [src]="'https://www.btgraphix.com/nba/images/all/' + player.id + '.jpg'"
+        <div class="mug"><img [src]="'https://www.btgraphix.com/nba/images/all/' + player.id + '.jpg'"
                 class="img-fluid" /></div>
-        <div class="team-pic pr-3">
+        <div class="team-pic">
+            <div class="team-city px-2">{{team.teamNameLong}}</div>
             <img [src]="'https://www.btgraphix.com/nba/images/teams/' + player.Team + '.gif'"
                 class="img-fluid" />
+
         </div>
         <div *ngIf="!bio" class="draft"><div class="loader"></div></div>
-        <div *ngIf="bio" class="draft">
+        <div *ngIf="bio" class="draft px-1 pt-1" [style.border-color]="color">
                         <div class="group">
                 <div class="value">{{bio.round }} round {{bio.pick}} pick</div>
             </div>
             <div class="group">
-                <div class="label pr-2">Draft Year:</div>
+                <div class="label pr-1">Draft Year:</div>
                 <div class="value">{{bio.draft_year }}</div>
             </div>
             <div class="group">
-                <div class="label pr-2">By:</div>
+                <div class="label pr-1">By:</div>
                 <div class="value">{{bio.drafted_by}}</div>
             </div>
         </div>
@@ -44,7 +46,7 @@
         </div>
 
         <div *ngIf="!bio" class="size"><div class="loader"></div></div>
-        <div *ngIf="bio" class="size">
+        <div *ngIf="bio" class="size pt-1">
             <div class="group">
                 <div class="label pr-2">Height:</div>
                 <div class="value">{{bio.feet }}'{{bio.inches}}"</div>
@@ -63,12 +65,12 @@
 
     <div class="stats mt-1">
         <div class="stat" [style.background-color]="color">
-            <div><span>{{ 'PTS' | lowercase}}</span> {{player.PTS | number:'.1-1' }} <br/> {{player.PTS/player.GP | number:'.1-1' }}</div>
-            <div><span>{{ 'REB' | lowercase}}</span> {{player.TR | number:'.1-1'}} <br/> {{player.TR/player.GP | number:'.1-1'}}</div>
-            <div><span>{{ 'AST' | lowercase}}</span> {{player.AS | number: '.1-1'}} <br/> {{player.AS/player.GP | number: '.1-1'}}</div>
-            <div><span>{{ 'BLK' | lowercase}}</span> {{player.BK | number: '.1-1'}} <br/> {{player.BK/player.GP | number: '.1-1'}}</div>
-            <div><span>{{ 'ST' | lowercase}}</span> {{player.ST | number: '.1-1'}} <br/> {{player.ST/player.GP | number: '.1-1'}}</div>
-            <div><span>{{ 'TO' | lowercase}}</span> {{player.TO | number: '.1-1'}} <br/> {{player.TO/player.GP | number: '.1-1'}}</div>
+            <div><span>{{ 'PTS' | lowercase}}</span> {{player.PTS }} <br/> {{player.PTS/player.GP | number:'.1-1' }}</div>
+            <div><span>{{ 'REB' | lowercase}}</span> {{player.TR }} <br/> {{player.TR/player.GP | number:'.1-1'}}</div>
+            <div><span>{{ 'AST' | lowercase}}</span> {{player.AS }} <br/> {{player.AS/player.GP | number: '.1-1'}}</div>
+            <div><span>{{ 'BLK' | lowercase}}</span> {{player.BK }} <br/> {{player.BK/player.GP | number: '.1-1'}}</div>
+            <div><span>{{ 'ST' | lowercase}}</span> {{player.ST }} <br/> {{player.ST/player.GP | number: '.1-1'}}</div>
+            <div><span>{{ 'TO' | lowercase}}</span> {{player.TO }} <br/> {{player.TO/player.GP | number: '.1-1'}}</div>
         </div>
     </div>
 </div>
