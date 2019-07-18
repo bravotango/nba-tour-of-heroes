@@ -8,8 +8,8 @@ export class StatLine {
     Min: number;
     FGM: number;
     FGA: number;
-    TPM: number;
-    TPA: number;
+    TPM?: number;
+    TPA?: number;
     FTM: number;
     FTA: number;
     OR: number;

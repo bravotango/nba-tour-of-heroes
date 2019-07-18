@@ -16,20 +16,24 @@ export class DashboardComponent implements OnInit {
   constructor(private nbaService: NbaService,private heroService:HeroService) { }
 
   ngOnInit() {
-    this.getPlayers();
+
+    if (!sessionStorage.getItem("stats")) { this.getPlayers(); } else {
+      this.players = JSON.parse(sessionStorage.getItem("stats"))
+    }
+
   }
 
   getPlayers(){
-    if (!this.players) {
-    this.nbaService.getStats()
-    //.subscribe(PLAYERS => this.players = PLAYERS.slice(0,12));
-    .subscribe(PLAYERS => this.players = PLAYERS);
-    
-    }
-  }
 
-  sortPTS() {
-    this.players
+    if (!sessionStorage.getItem("stats")) {
+      this.nbaService.getStats()
+      //.subscribe(PLAYERS => this.players = PLAYERS.slice(0,12));
+
+      .subscribe((STATISTICS) => {
+        this.players = STATISTICS,
+        sessionStorage.setItem("stats",  JSON.stringify(STATISTICS))
+      });
+    } 
   }
 
 }

@@ -1,4 +1,4 @@
-<div class="playerCard p-2" [style.border-color]="color">
+<div class="playerCard p-2 mb-2" [style.border-color]="color">
 
     <div class="teamLogoBackground" [ngStyle]="{background: 'url(' + image + ') center center/100% no-repeat'}"></div>
 
@@ -11,7 +11,7 @@
         <div class="mug"><img [src]="'https://www.btgraphix.com/nba/images/all/' + player.id + '.jpg'"
                 class="img-fluid" /></div>
         <div class="team-pic">
-            <div class="team-city px-2">{{team.teamNameLong}}</div>
+            <div class="team-city">{{team.teamNameLong}}</div>
             <img [src]="'https://www.btgraphix.com/nba/images/teams/' + player.Team + '.gif'"
                 class="img-fluid" />
 

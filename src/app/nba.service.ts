@@ -8,12 +8,13 @@
   import {Bio} from './bio';
   import {Team} from './team';
   
+
+
+
   @Injectable({
     providedIn: 'root'
   })
   export class NbaService {
-  
-  myPlayers:StatLine[]=PLAYERS;
   
     constructor(private httpClient: HttpClient) { }
   
@@ -24,9 +25,10 @@
     }
 
     getStats(): Observable<StatLine[]> {
+      //var stats = this.httpClient.get<StatLine[]>('https://btgraphix.com/nba/stats.php');
+
       return this.httpClient.get<StatLine[]>('https://btgraphix.com/nba/stats.php');
     }
-
 
     getTeams() {
       return this.httpClient.get('https://btgraphix.com/nba/teams.php');
@@ -38,7 +40,7 @@
     getPlayer(id:number):Observable<StatLine> {
       console.log('entered getPlayer id: ' + id);
       let myQuery = this.API_URL + 'player.php?id=' + id
-      console.log(this.httpClient.get<StatLine>(myQuery))
+     // console.log(this.httpClient.get<StatLine>(myQuery))
       return this.httpClient.get<StatLine>(myQuery);
     }
     

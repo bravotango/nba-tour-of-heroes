@@ -16,13 +16,14 @@
 .player {
     font-size:.80em;
     display:grid;
+
     justify-content: space-between;
-    grid-template-areas:    "a a b b d d"
-                            "a a b b d d"
-                            "a a b b x x"
-                            "a a c c c c"
-                            "a a f f f e";
-    .mug {grid-area:a;img{width:120px;height:180px;}}
+    grid-template-areas:    "a a b b b b d d"
+                            "a a b b b b d d"
+                            "a a b b b b x x"
+                            "a a c c c c c c"
+                            "a a f f f f f e";
+    .mug {grid-area:a;img{width:120px;}}
     .team-pic {grid-area:b;img{height:55px;}}
 
     .team-city {grid-area:t;}
@@ -58,11 +59,11 @@
 }
 
 @media screen and (max-width:480px) {
-    .player {    font-size:.70em;
+    .player {    font-size:.75em;
     display:grid;
     justify-content: space-between;
-    grid-template-areas:    "a a b b d d d d"
-                            "a a b b d d d d"
+    grid-template-areas:    "a b b b d d d d"
+                            "a b b b d d d d"
                             "c c c c c c c c"
                             "f f f f f f e e";
 
