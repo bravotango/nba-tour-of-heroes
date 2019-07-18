@@ -11,10 +11,10 @@
         <div class="mug"><img [src]="'https://www.btgraphix.com/nba/images/all/' + player.id + '.jpg'"
                 class="img-fluid" /></div>
         <div class="team-pic">
-            <div class="team-city">{{team.teamNameLong}}</div>
+            <div *ngIf="team" class="team-city" [style.color]="color">{{team.teamCity}}</div>
             <img [src]="'https://www.btgraphix.com/nba/images/teams/' + player.Team + '.gif'"
                 class="img-fluid" />
-
+            <div *ngIf="team" class="team-name" [style.color]="color">{{team.teamName}}</div>
         </div>
         <div *ngIf="!bio" class="draft"><div class="loader"></div></div>
         <div *ngIf="bio" class="draft px-1 pt-1" [style.border-color]="color">
@@ -23,11 +23,11 @@
             </div>
             <div class="group">
                 <div class="label pr-1">Draft Year:</div>
-                <div class="value">{{bio.draft_year }}</div>
+                <div class="value">{{bio.draftYear }}</div>
             </div>
             <div class="group">
                 <div class="label pr-1">By:</div>
-                <div class="value">{{bio.drafted_by}}</div>
+                <div class="value">{{bio.draftTeam}}</div>
             </div>
         </div>
         <div *ngIf="!bio" class="bio"><div class="loader"></div></div>
@@ -40,7 +40,7 @@
             </div>
             <div class="group">
                 <div class="label pr-2">Birthdate:</div>
-                <div class="value">{{bio.dob | date:"MM/dd/yy"}}</div>
+                <div class="value">{{bio.birthdate | date:"MM/dd/yy"}}</div>
             </div>
 
         </div>

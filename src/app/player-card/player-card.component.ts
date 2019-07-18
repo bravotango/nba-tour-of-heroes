@@ -48,7 +48,7 @@ export class PlayerCardComponent implements OnInit {
   }
 
   calculateAge(bio:Bio):void{
-    let timeDiff = Math.abs(Date.now() - new Date(bio.dob).getTime());
+    let timeDiff = Math.abs(Date.now() - new Date(bio.birthdate).getTime());
     let age = Math.floor((timeDiff / (1000 * 3600 * 24))/365.25);
     this.age = age;
   }

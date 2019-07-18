@@ -52,11 +52,11 @@ export class Player {
     feet: number;
     inches: number;
     weight: number;
-    dob: string;
+    birthdate: string;
     birthplace: string;
     college: string;
-    draft_year: string;
+    draftYear: string;
     round: string;
     pick: string;
-    drafted_by: string
+    draftTeam: string
   }

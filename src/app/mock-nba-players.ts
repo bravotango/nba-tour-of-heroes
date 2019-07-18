@@ -55,13 +55,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 5,
       weight: 220,
-      dob: "1989-08-26T00:00:00",
+      birthdate: "1989-08-26T00:00:00",
       birthplace: "Bellflower, California",
       college: "Arizona State",
-      draft_year: "2009",
+      draftYear: "2009",
       round: "1st",
       pick: "3rd",
-      drafted_by: "Thunder"
+      draftTeam: "Thunder"
     },
     {
       id: 5185,
@@ -117,13 +117,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 11,
       weight: 242,
-      dob: "1994-12-06T00:00:00",
+      birthdate: "1994-12-06T00:00:00",
       birthplace: "Athens, Greece",
       college: "None",
-      draft_year: "2013",
+      draftYear: "2013",
       round: "1st",
       pick: "15th",
-      drafted_by: "Bucks"
+      draftTeam: "Bucks"
     },
     {
       id: 5432,
@@ -179,13 +179,13 @@ export const PLAYERS:Player[] = [
       feet: 7,
       inches: 0,
       weight: 248,
-      dob: "1995-11-15T00:00:00",
+      birthdate: "1995-11-15T00:00:00",
       birthplace: "Edison, New Jersey",
       college: "Kentucky",
-      draft_year: "2015",
+      draftYear: "2015",
       round: "1st",
       pick: "1st",
-      drafted_by: "Timberwolves"
+      draftTeam: "Timberwolves"
     },
     {
       id: 5352,
@@ -241,13 +241,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 10,
       weight: 250,
-      dob: "1995-02-19T00:00:00",
+      birthdate: "1995-02-19T00:00:00",
       birthplace: "Sombor, Serbia-Montenegro",
       college: "None",
-      draft_year: "2014",
+      draftYear: "2014",
       round: "2nd",
       pick: "11th",
-      drafted_by: "Nuggets"
+      draftTeam: "Nuggets"
     },
     {
       id: 4897,
@@ -303,13 +303,13 @@ export const PLAYERS:Player[] = [
       feet: 7,
       inches: 0,
       weight: 260,
-      dob: "1990-10-24T00:00:00",
+      birthdate: "1990-10-24T00:00:00",
       birthplace: "Morges, Switzerland",
       college: "USC",
-      draft_year: "2011",
+      draftYear: "2011",
       round: "1st",
       pick: "16th",
-      drafted_by: "76ers"
+      draftTeam: "76ers"
     },
     {
       id: 5197,
@@ -365,13 +365,13 @@ export const PLAYERS:Player[] = [
       feet: 7,
       inches: 1,
       weight: 245,
-      dob: "1992-06-26T00:00:00",
+      birthdate: "1992-06-26T00:00:00",
       birthplace: "Saint-Quentin, France",
       college: "None",
-      draft_year: "2013",
+      draftYear: "2013",
       round: "1st",
       pick: "27th",
-      drafted_by: "Nuggets"
+      draftTeam: "Nuggets"
     },
     {
       id: 4244,
@@ -427,13 +427,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 9,
       weight: 240,
-      dob: "1988-09-29T00:00:00",
+      birthdate: "1988-09-29T00:00:00",
       birthplace: "Washington, District of Columbia",
       college: "Texas",
-      draft_year: "2007",
+      draftYear: "2007",
       round: "1st",
       pick: "2nd",
-      drafted_by: "SuperSonics"
+      draftTeam: "SuperSonics"
     },
     {
       id: 5015,
@@ -489,13 +489,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 11,
       weight: 279,
-      dob: "1993-08-10T00:00:00",
+      birthdate: "1993-08-10T00:00:00",
       birthplace: "Mount Vernon, New York",
       college: "Connecticut",
-      draft_year: "2012",
+      draftYear: "2012",
       round: "1st",
       pick: "9th",
-      drafted_by: "Pistons"
+      draftTeam: "Pistons"
     },
     {
       id: 4390,
@@ -551,13 +551,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 3,
       weight: 200,
-      dob: "1988-11-12T00:00:00",
+      birthdate: "1988-11-12T00:00:00",
       birthplace: "Long Beach, California",
       college: "UCLA",
-      draft_year: "2008",
+      draftYear: "2008",
       round: "1st",
       pick: "4th",
-      drafted_by: "Thunder"
+      draftTeam: "Thunder"
     },
     {
       id: 4725,
@@ -613,13 +613,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 9,
       weight: 220,
-      dob: "1990-05-02T00:00:00",
+      birthdate: "1990-05-02T00:00:00",
       birthplace: "Palmdale, California",
       college: "Fresno State",
-      draft_year: "2010",
+      draftYear: "2010",
       round: "1st",
       pick: "10th",
-      drafted_by: "Pacers"
+      draftTeam: "Pacers"
     },
     {
       id: 5294,
@@ -675,13 +675,13 @@ export const PLAYERS:Player[] = [
       feet: 7,
       inches: 0,
       weight: 260,
-      dob: "1994-03-16T00:00:00",
+      birthdate: "1994-03-16T00:00:00",
       birthplace: "Yaounde, Cameroon",
       college: "Kansas",
-      draft_year: "2014",
+      draftYear: "2014",
       round: "1st",
       pick: "3rd",
-      drafted_by: "76ers"
+      draftTeam: "76ers"
     },
     {
       id: 5012,
@@ -737,13 +737,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 3,
       weight: 195,
-      dob: "1990-07-15T00:00:00",
+      birthdate: "1990-07-15T00:00:00",
       birthplace: "Oakland, California",
       college: "Weber State",
-      draft_year: "2012",
+      draftYear: "2012",
       round: "1st",
       pick: "6th",
-      drafted_by: "Trail Blazers"
+      draftTeam: "Trail Blazers"
     },
     {
       id: 5009,
@@ -799,13 +799,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 5,
       weight: 207,
-      dob: "1993-06-28T00:00:00",
+      birthdate: "1993-06-28T00:00:00",
       birthplace: "St. Louis, Missouri",
       college: "Florida",
-      draft_year: "2012",
+      draftYear: "2012",
       round: "1st",
       pick: "3rd",
-      drafted_by: "Wizards"
+      draftTeam: "Wizards"
     },
     {
       id: 4130,
@@ -861,13 +861,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 11,
       weight: 260,
-      dob: "1985-07-19T00:00:00",
+      birthdate: "1985-07-19T00:00:00",
       birthplace: "Dallas, Texas",
       college: "Texas",
-      draft_year: "2006",
+      draftYear: "2006",
       round: "1st",
       pick: "2nd",
-      drafted_by: "Bulls"
+      draftTeam: "Bulls"
     },
     {
       id: 5600,
@@ -923,13 +923,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 10,
       weight: 230,
-      dob: "1996-07-20T00:00:00",
+      birthdate: "1996-07-20T00:00:00",
       birthplace: "Melbourne, Australia",
       college: "LSU",
-      draft_year: "2016",
+      draftYear: "2016",
       round: "1st",
       pick: "1st",
-      drafted_by: "76ers"
+      draftTeam: "76ers"
     },
     {
       id: 5007,
@@ -985,13 +985,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 10,
       weight: 253,
-      dob: "1993-03-11T00:00:00",
+      birthdate: "1993-03-11T00:00:00",
       birthplace: "Chicago, Illinois",
       college: "Kentucky",
-      draft_year: "2012",
+      draftYear: "2012",
       round: "1st",
       pick: "1st",
-      drafted_by: "Hornets"
+      draftTeam: "Hornets"
     },
     {
       id: 4890,
@@ -1047,13 +1047,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 1,
       weight: 184,
-      dob: "1990-05-08T00:00:00",
+      birthdate: "1990-05-08T00:00:00",
       birthplace: "Bronx, New York",
       college: "Connecticut",
-      draft_year: "2011",
+      draftYear: "2011",
       round: "1st",
       pick: "9th",
-      drafted_by: "Bobcats"
+      draftTeam: "Bobcats"
     },
     {
       id: 4612,
@@ -1109,13 +1109,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 3,
       weight: 190,
-      dob: "1988-03-14T00:00:00",
+      birthdate: "1988-03-14T00:00:00",
       birthplace: "Akron, Ohio",
       college: "Davidson",
-      draft_year: "2009",
+      draftYear: "2009",
       round: "1st",
       pick: "7th",
-      drafted_by: "Warriors"
+      draftTeam: "Warriors"
     },
     {
       id: 4561,
@@ -1171,13 +1171,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 10,
       weight: 250,
-      dob: "1989-03-16T00:00:00",
+      birthdate: "1989-03-16T00:00:00",
       birthplace: "Oklahoma City, Oklahoma",
       college: "Oklahoma",
-      draft_year: "2009",
+      draftYear: "2009",
       round: "1st",
       pick: "1st",
-      drafted_by: "Clippers"
+      draftTeam: "Clippers"
     },
     {
       id: 4901,
@@ -1233,13 +1233,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 9,
       weight: 235,
-      dob: "1992-07-15T00:00:00",
+      birthdate: "1992-07-15T00:00:00",
       birthplace: "Islip, New York",
       college: "Tennessee",
-      draft_year: "2011",
+      draftYear: "2011",
       round: "1st",
       pick: "19th",
-      drafted_by: "Bobcats"
+      draftTeam: "Bobcats"
     },
     {
       id: 5336,
@@ -1295,13 +1295,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 10,
       weight: 240,
-      dob: "1994-05-18T00:00:00",
+      birthdate: "1994-05-18T00:00:00",
       birthplace: "Geneva, Switzerland",
       college: "None",
-      draft_year: "2014",
+      draftYear: "2014",
       round: "1st",
       pick: "25th",
-      drafted_by: "Rockets"
+      draftTeam: "Rockets"
     },
     {
       id: 4614,
@@ -1357,13 +1357,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 7,
       weight: 220,
-      dob: "1989-08-07T00:00:00",
+      birthdate: "1989-08-07T00:00:00",
       birthplace: "Compton, California",
       college: "USC",
-      draft_year: "2009",
+      draftYear: "2009",
       round: "1st",
       pick: "9th",
-      drafted_by: "Raptors"
+      draftTeam: "Raptors"
     },
     {
       id: 4840,
@@ -1419,13 +1419,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 3,
       weight: 193,
-      dob: "1992-03-23T00:00:00",
+      birthdate: "1992-03-23T00:00:00",
       birthplace: "Melbourne, Australia",
       college: "Duke",
-      draft_year: "2011",
+      draftYear: "2011",
       round: "1st",
       pick: "1st",
-      drafted_by: "Cavaliers"
+      draftTeam: "Cavaliers"
     },
     {
       id: 5318,
@@ -1481,13 +1481,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 9,
       weight: 250,
-      dob: "1994-11-29T00:00:00",
+      birthdate: "1994-11-29T00:00:00",
       birthplace: "Dallas, Texas",
       college: "Kentucky",
-      draft_year: "2014",
+      draftYear: "2014",
       round: "1st",
       pick: "7th",
-      drafted_by: "Lakers"
+      draftTeam: "Lakers"
     },
     {
       id: 3704,
@@ -1543,13 +1543,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 8,
       weight: 250,
-      dob: "1984-12-30T00:00:00",
+      birthdate: "1984-12-30T00:00:00",
       birthplace: "Akron, Ohio",
       college: "None",
-      draft_year: "2003",
+      draftYear: "2003",
       round: "1st",
       pick: "1st",
-      drafted_by: "Cavaliers"
+      draftTeam: "Cavaliers"
     },
     {
       id: 5658,
@@ -1605,13 +1605,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 9,
       weight: 230,
-      dob: "1994-04-02T00:00:00",
+      birthdate: "1994-04-02T00:00:00",
       birthplace: "Douala, Cameroon",
       college: "New Mexico State",
-      draft_year: "2016",
+      draftYear: "2016",
       round: "1st",
       pick: "27th",
-      drafted_by: "Raptors"
+      draftTeam: "Raptors"
     },
     {
       id: 5327,
@@ -1667,13 +1667,13 @@ export const PLAYERS:Player[] = [
       feet: 7,
       inches: 0,
       weight: 275,
-      dob: "1994-08-23T00:00:00",
+      birthdate: "1994-08-23T00:00:00",
       birthplace: "Tuzla, Bosnia",
       college: "None",
-      draft_year: "2014",
+      draftYear: "2014",
       round: "1st",
       pick: "16th",
-      drafted_by: "Bulls"
+      draftTeam: "Bulls"
     },
     {
       id: 5492,
@@ -1729,13 +1729,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 8,
       weight: 240,
-      dob: "1994-01-26T00:00:00",
+      birthdate: "1994-01-26T00:00:00",
       birthplace: "Tarboro, North Carolina",
       college: "Louisville",
-      draft_year: "2015",
+      draftYear: "2015",
       round: "2nd",
       pick: "2nd",
-      drafted_by: "Rockets"
+      draftTeam: "Rockets"
     },
     {
       id: 4896,
@@ -1791,13 +1791,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 7,
       weight: 230,
-      dob: "1991-06-29T00:00:00",
+      birthdate: "1991-06-29T00:00:00",
       birthplace: "Riverside, California",
       college: "San Diego State",
-      draft_year: "2011",
+      draftYear: "2011",
       round: "1st",
       pick: "15th",
-      drafted_by: "Pacers"
+      draftTeam: "Pacers"
     },
     {
       id: 5958,
@@ -1853,13 +1853,13 @@ export const PLAYERS:Player[] = [
       feet: 7,
       inches: 1,
       weight: 250,
-      dob: "1998-07-23T00:00:00",
+      birthdate: "1998-07-23T00:00:00",
       birthplace: "Nassau, Bahamas",
       college: "Arizona",
-      draft_year: "2018",
+      draftYear: "2018",
       round: "1st",
       pick: "1st",
-      drafted_by: "Suns"
+      draftTeam: "Suns"
     },
     {
       id: 5163,
@@ -1915,13 +1915,13 @@ export const PLAYERS:Player[] = [
       feet: 7,
       inches: 0,
       weight: 265,
-      dob: "1993-07-20T00:00:00",
+      birthdate: "1993-07-20T00:00:00",
       birthplace: "Rotorua, New Zealand",
       college: "Pittsburgh",
-      draft_year: "2013",
+      draftYear: "2013",
       round: "1st",
       pick: "12th",
-      drafted_by: "Thunder"
+      draftTeam: "Thunder"
     },
     {
       id: 6014,
@@ -1977,13 +1977,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 7,
       weight: 218,
-      dob: "1999-02-28T00:00:00",
+      birthdate: "1999-02-28T00:00:00",
       birthplace: "Ljubljana, Slovenia",
       college: "None",
-      draft_year: "2018",
+      draftYear: "2018",
       round: "1st",
       pick: "3rd",
-      drafted_by: "Hawks"
+      draftTeam: "Hawks"
     },
     {
       id: 5433,
@@ -2039,13 +2039,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 5,
       weight: 198,
-      dob: "1996-02-23T00:00:00",
+      birthdate: "1996-02-23T00:00:00",
       birthplace: "Louisville, Kentucky",
       college: "Ohio State",
-      draft_year: "2015",
+      draftYear: "2015",
       round: "1st",
       pick: "2nd",
-      drafted_by: "Lakers"
+      draftTeam: "Lakers"
     },
     {
       id: 4622,
@@ -2101,13 +2101,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 4,
       weight: 205,
-      dob: "1990-06-12T00:00:00",
+      birthdate: "1990-06-12T00:00:00",
       birthplace: "Mission Hills, California",
       college: "UCLA",
-      draft_year: "2009",
+      draftYear: "2009",
       round: "1st",
       pick: "17th",
-      drafted_by: "76ers"
+      draftTeam: "76ers"
     },
     {
       id: 4497,
@@ -2163,13 +2163,13 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 11,
       weight: 265,
-      dob: "1988-07-21T00:00:00",
+      birthdate: "1988-07-21T00:00:00",
       birthplace: "Houston, Texas",
       college: "Texas A&M",
-      draft_year: "2008",
+      draftYear: "2008",
       round: "2nd",
       pick: "5th",
-      drafted_by: "Clippers"
+      draftTeam: "Clippers"
     },
     {
       id: 5767,
@@ -2225,12 +2225,12 @@ export const PLAYERS:Player[] = [
       feet: 6,
       inches: 3,
       weight: 175,
-      dob: "1997-12-20T00:00:00",
+      birthdate: "1997-12-20T00:00:00",
       birthplace: "New Orleans, Louisiana",
       college: "Kentucky",
-      draft_year: "2017",
+      draftYear: "2017",
       round: "1st",
       pick: "5th",
-      drafted_by: "Kings"
+      draftTeam: "Kings"
     }
   ]
